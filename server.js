@@ -1,5 +1,6 @@
 var express = require('express');
 //const fileupload = require('express-fileupload');
+var port = process.env.PORT || 3000	;
 
 var multer = require('multer');
 var app = express();
@@ -26,6 +27,6 @@ app.post('/upload', (req, res) => {
     });	
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
 	console.log('listening to port 3000')
 });
