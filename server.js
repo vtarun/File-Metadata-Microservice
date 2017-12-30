@@ -7,7 +7,7 @@ var app = express();
 
 var storage = multer.diskStorage({
 	destination : function(req, file, callback){
-		callback(null, './uploaded-files');
+		callback(null, './uploaded-files/');
 	},
 	filename : function(req, file, callback){
 		callback(null, (file.originalname).substring(0,(file.originalname).lastIndexOf('.')) + '-' + Date.now()+(file.originalname).substr((file.originalname).lastIndexOf('.')));
